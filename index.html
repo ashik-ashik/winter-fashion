@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penguin Fashion Online With Tailwind CSS</title>
+  <link rel="shortcut icon" href="https://ashik-ashik.github.io/img/cool-shop/favicon/ashik.ico" type="image/x-icon">
+
+  <!-- Tailwind CSS -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+  <!-- header -->
+  <header class="bg-red-100 py-3">
+    <nav class="container mx-auto">
+      <div class="navigation-menu flex justify-between items-center">
+        <div class="site-logo-area">
+          <img class="h-9" src="./site-logo.png" alt="">
+        </div>
+        <ul class="menu list-none hidden lg:flex space-x-6">
+          <li><a class="font-medium" href="#">Home</a></li>
+          <li><a class="font-medium" href="#">Product</a></li>
+          <li><a class="font-medium" href="#">About Us</a></li>
+          <li><a class="font-medium" href="#">Contact Us</a></li>
+          <li><a class="font-medium" href="#">Blogs</a></li>
+        </ul>
+        <!-- mobile menu toggler button -->
+        <button class="lg:hidden menu-toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+
+        </button>
+      </div>
+
+      <!-- mobila menu -->
+      <div class="mobile-menu mt-3 hidden">
+        <a href="#" class="block px-4 py-2 hover:bg-red-200">Home</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-200">Product</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-200">About Us</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-200">Cpntact Us</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-200">Blogs</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- mobile menu script -->
+  <script>
+    let btn = document.querySelector('button.menu-toggle-btn');
+    let mobileMenu = document.querySelector('.mobile-menu');
+    btn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <main>
+  <!-- hero section -->
+    <section class="hero bg-red-100 py-12">
+      <div class="container mx-auto">
+        <div class="lg:flex justify-between items-center">
+          <div class="space-y-6">
+            <h2 class="lg:text-6xl md:text-5xl text-4xl uppercase"><span class="text-yellow-400 font-bold">Be The Penguins</span><br><span class="text-gray-700 font-bold">of Winter</span></h2>
+            <p class="w-3/4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, architecto.</p>
+            <a href="#" class="px-8 py-3.5 bg-green-500 hover:bg-green-700 text-white uppercase font-medium inline-block rounded-lg hover:shadow-lg focus:ring-2 focus:ring-offset-2 ring-green-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-white inline h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>
+              Buy Now</a>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <img src="./images/model.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Woman Jackets -->
+    <section class="woman-jacket py-6">
+      <div class="container mx-auto">
+        <h2 class="font-bold mb-5 text-4xl uppercase text-gray-700">Woman Jackets</h2>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+
+          <div class="space-y-4 p-4 rounded-lg shadow-lg">
+            <div class="p-4 bg-gray-200 rounded-lg">
+              <img class="h-64 mx-auto" src="./images/jacket-1.png" alt="Women Jackets">
+            </div>
+            <h3 class="text-2xl font-bold">Yellow Coat Jacket</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, numquam?</p>
+            <div class="md:flex justify-between items-center space-y-4">
+              <h4 class="text-2xl font-bold text-yellow-400">$344</h4>
+              <a href="#" class="px-8 py-3.5 bg-green-500 hover:bg-green-700 text-white uppercase font-medium inline-block rounded-lg hover:shadow-lg focus:ring-2 focus:ring-offset-2 ring-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white inline h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+                Buy Now</a>
+            </div>
+          </div>
+
+          <div class="space-y-4 p-4 rounded-lg shadow-lg">
+            <div class="p-4 bg-gray-200 rounded-lg">
+              <img class="h-64 mx-auto" src="./images/jacket-2.png" alt="Women Jackets">
+            </div>
+            <h3 class="text-2xl font-bold">Ladies Jacket</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, numquam?</p>
+            <div class="md:flex justify-between items-center space-y-4">
+              <h4 class="text-2xl font-bold text-yellow-400">$229</h4>
+              <a href="#" class="px-8 py-3.5 bg-green-500 hover:bg-green-700 text-white uppercase font-medium inline-block rounded-lg hover:shadow-lg focus:ring-2 focus:ring-offset-2 ring-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white inline h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+                Buy Now</a>
+            </div>
+          </div>
+
+          <div class="space-y-4 p-4 rounded-lg shadow-lg">
+            <div class="p-4 bg-gray-200 rounded-lg">
+              <img class="h-64 mx-auto" src="./images/jacket-3.png" alt="Women Jackets">
+            </div>
+            <h3 class="text-2xl font-bold">Woman Leather Jacket</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, numquam?</p>
+            <div class="md:flex justify-between items-center space-y-4">
+              <h4 class="text-2xl font-bold text-yellow-400">$236</h4>
+              <a href="#" class="px-8 py-3.5 bg-green-500 hover:bg-green-700 text-white uppercase font-medium inline-block rounded-lg hover:shadow-lg focus:ring-2 focus:ring-offset-2 ring-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white inline h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+                Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Men Jackets -->
+    <section class="man-jacket py-6">
+      <div class="container mx-auto">
+        <h2 class="font-bold my-5 text-3xl uppercase text-gray-700">Man Jackets</h2>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+
+          <div class="space-y-4 p-4 rounded-lg shadow-lg">
+            <div class="p-4 bg-gray-200 rounded-lg">
+              <img class="h-64 mx-auto" src="./images/jacket-4.png" alt="Women Jackets">
+            </div>
+            <h3 class="text-2xl font-bold">Snowboard Jacket Mens</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, numquam?</p>
+            <div class="md:flex justify-between items-center space-y-4">
+              <h4 class="text-2xl font-bold text-yellow-400">$234</h4>
+              <a href="#" class="px-8 py-3.5 bg-green-500 hover:bg-green-700 text-white uppercase font-medium inline-block rounded-lg hover:shadow-lg focus:ring-2 focus:ring-offset-2 ring-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white inline h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+                Buy Now</a>
+            </div>
+          </div>
+
+          <div class="space-y-4 p-4 rounded-lg shadow-lg">
+            <div class="p-4 bg-gray-200 rounded-lg">
+              <img class="h-64 mx-auto" src="./images/jacket-5.png" alt="Women Jackets">
+            </div>
+            <h3 class="text-2xl font-bold">Man Leather Jacket</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, numquam?</p>
+            <div class="md:flex justify-between items-center space-y-4">
+              <h4 class="text-2xl font-bold text-yellow-400">$214</h4>
+              <a href="#" class="px-8 py-3.5 bg-green-500 hover:bg-green-700 text-white uppercase font-medium inline-block rounded-lg hover:shadow-lg focus:ring-2 focus:ring-offset-2 ring-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white inline h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+                Buy Now</a>
+            </div>
+          </div>
+
+          <div class="space-y-4 p-4 rounded-lg shadow-lg">
+            <div class="p-4 bg-gray-200 rounded-lg">
+              <img class="h-64 mx-auto" src="./images/jacket-6.png" alt="Women Jackets">
+            </div>
+            <h3 class="text-2xl font-bold">Man Causal Jacket</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, numquam?</p>
+            <div class="md:flex justify-between items-center space-y-4">
+              <h4 class="text-2xl font-bold text-yellow-400">$354</h4>
+              <a href="#" class="px-8 py-3.5 bg-green-500 hover:bg-green-700 text-white uppercase font-medium inline-block rounded-lg hover:shadow-lg focus:ring-2 focus:ring-offset-2 ring-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white inline h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+                Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- feature section -->
+    <section class="features py-6">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <!-- feature items -->
+          <div class="feature-item-1 flex items-center px-7 py-5 shadow-lg space-x-6 space-y-6 rounded-lg flex-col md:flex-row">
+            <div class="icon">
+              <img class="w-16" src="./images/icons/home.png" alt="">
+            </div>
+            <div class="text space-y-4 md:text-left text-center">
+              <h3 class="text-2xl font-bold text-gray-800">Find the Perfect Fit</h3>
+              <p>Everybody is different, which is why we
+                offer styles for every body.</p>
+            </div>
+          </div>
+
+          <div class="feature-img row-span-3 px-7 py-5 lg:col-start-2 col-start-1 row-start-1">
+            <img src="./images/shopping.png" alt="">
+          </div>
+          
+          <!-- feature items -->
+          <div class="feature-item-1 flex items-center px-7 py-5 shadow-lg space-x-6 space-y-6 rounded-lg flex-col md:flex-row">
+            <div class="icon">
+              <img class="w-16" src="./images/icons/box.png" alt="">
+            </div>
+            <div class="text space-y-4 md:text-left text-center">
+              <h3 class="text-2xl font-bold text-gray-800">Free Exchanges</h3>
+              <p>Everybody is different, which is why we
+                offer styles for every body.</p>
+            </div>
+          </div>
+          
+          <!-- feature items -->
+          <div class="feature-item-1 flex items-center px-7 py-5 shadow-lg space-x-6 space-y-6 rounded-lg flex-col md:flex-row">
+            <div class="icon">
+              <img class="w-16" src="./images/icons/support.png" alt="">
+            </div>
+            <div class="text space-y-4 md:text-left text-center">
+              <h3 class="text-2xl font-bold text-gray-800">Contact Our Seller</h3>
+              <p>Everybody is different, which is why we
+                offer styles for every body.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+</body>
+</html>
